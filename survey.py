@@ -8,5 +8,5 @@ def hello():
     return "<p>hello</p>"
 
 @app.route('/daqing')
-def hello():
+def hello2():
     return "<p>hello daqing</p>"
