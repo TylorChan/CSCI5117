@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Summary</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" 
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+                <h1>Survey</h1>
+            </div>
+        </div>
+        <div class="splash-container">
+            <div class="splash-s">
+                <div class="questionChart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class = "timeseries">
+                    <canvas id="timeseriesChart"></canvas>
+                </div>
+                <p id = "table-text">Summary of Q2 and Q5 (text)</p>
+                <div id = "table"></div>
+            </div>
+        </div>       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+            var serverData1 = {{data | tojson | safe}};
+        </script>
+        <script src="../static/survey.js"></script>
+    </body>
+</html>

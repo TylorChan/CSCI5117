@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Weclome{% endblock %}
+
+{% block style %} <script src="/static/survey.js"></script>{% endblock %}
+
+{% block content %}
+<div class="splash">
+    <div class="splash-head">
+        <p id = "splash-head-title">{% block header %}WELCOME{% endblock %}</p>
+    </div>
+    <p class="splash-subhead">
+        Hello there! we want you to do a survey about Marvel movies!
+    </p>
+    <p>
+        <form class="pure-form pure-form-aligned"  action="/decline" method="get">
+            <button type="submit" class="pure-button">Decline</button>
+        </form> 
+    </p>
+    <p>
+        <form class="pure-form pure-form-aligned" action="/survey" method="get">
+            <button type="submit" class="pure-button">Consent</button>
+        </form>
+    </p>
+</div>
+{% endblock %}

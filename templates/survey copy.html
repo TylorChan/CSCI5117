@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Survey Time{% endblock %}
+
+{% block style %}<script src="/static/survey.js"></script>{% endblock %}
+
+{% block content %}
+<div class="splash">
+    <div class = "survey-body">
+        <form class="pure-form" action="/thanks" method="post" >
+            <div class = "q1_section">
+                <p1 class="question">1. Had you seen the Marvel movies before?</p1><br>
+                <input type="radio" id="q1_1" name="q1" value="yes">
+                <label for="q1_1">Yes</label><br>
+                <input type="radio" id="q1_2" name="q1" value="No">
+                <label for="q1_2"> No</label><br><br>
+            </div>
+            <div class = "q2_section">
+                <!--
+                    <p1>2. Which character from a Marvel movie do you like the best?</p1><br>
+                -->
+                <label class="question" for="q2">2. What is your favorite Marvel movies?</label><br>
+                <input type="text" id="q2" name="q2" min="3" required><br><br>
+            </div>
+            <div class = "q3_section">
+                <p1 class="question">3. Which character from a Marvel movie do you like the best? Choose one</p1><br>
+                <input type="radio" id="q3_1" name="q3" value="Black Panther">
+                <label for="q3_1">Black Panther. RIP Chadwick Boseman</label><br>
+                <input type="radio" id="q3_2" name="q3" value="Spider-Man">
+                <label for="q3_2">Spider-Man</label><br>
+                <input type="radio" id="q3_3" name="q3" value="Black Widow">
+                <label for="q3_3">Black Widow</label><br>
+                <input type="radio" id="q3_4" name="q3" value="Loki">
+                <label for="q3_4">Loki</label><br>
+                <input type="radio" id="q3_5" name="q3" value="Happy">
+                <label for="q3_5">Happy Hogan....even though he does not have any super power</label><br>
+                <input type="radio" id="q3_6" name="q3" value="Iron Man">
+                <label for="q3_6">Iron Man</label><br>
+                <input type="radio" id="q3_7" name="q3" value="Hulk">
+                <label for="q3_7">Hulk</label><br>
+                <input type="radio" id="q3_8" name="q3" value="Captain America">
+                <label for="q3_8">Captain America</label><br>
+                <input type="radio" id="q3_9" name="q3" value="Doctor Strange">
+                <label for="q3_9">Doctor Strange</label><br>
+                <input type="radio" id="q3_10" name="q3" value="Thor">
+                <label for="q3_10">Thor</label><br><br>
+            </div>
+            <div class = "q4_section">
+                <p1 class="question">4. What are your favorite super powers? Please choose more than one</p1><br>
+                <input type="checkbox" id="q4_1" name="q4[]" value="Super Strength and Durability">
+                <label for="q4_1">Super Strength and Durability</label><br>
+                <input type="checkbox" id="q4_2" name="q4[]" value="Flight">
+                <label for="q4_2">Flight</label><br>
+                <input type="checkbox" id="q4_3" name="q4[]" value="Mind Control">
+                <label for="q4_3"> Mind Control</label><br>
+                <input type="checkbox" id="q4_4" name="q4[]" value="Healing Factor">
+                <label for="q4_4"> Healing Factor </label><br>
+                <input type="checkbox" id="q4_5" onclick="TriggerConditional_1()">
+                <label for="q4_5">Actually I also like: </label>
+                <br>
+                <textarea rows="2" cols="50" id="conditional_1" style="display: none;" name="q4[]"></textarea>
+                <br>
+            </div>
+            <div class = "q5_section">
+                <label class="question" for="q5">5. Do you think superheroes movie becomes less attractive? Why? or Why not? </label>
+                <br>
+                <textarea rows="8" cols="50" id="q5" name="q5" required></textarea>
+                <br><br>
+            </div>
+            <button type="submit" class="pure-button">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+        
+
+
+            

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}</title>
+        {% block style1 %}{% endblock %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" 
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/style.css">
+        {% block style %}{% endblock %}
+    </head>
+    <body>
+        <div class="header">
+            <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+                <!-- <h1>Survey</h1> -->
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-heading"><a href="/" class="pure-menu-link">Survey</a></li>
+                    <li class="pure-menu-heading"><a href="/admin/summary" class="pure-menu-link">Summary</a></li>
+                    <li class="pure-menu-heading"><a href="/api/results" class="pure-menu-link">API Result</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="splash-container">
+        {% block content %}{% endblock %}
+        </div>
+        {% block content_script %}{% endblock %}       
+    </body>
+</html>
